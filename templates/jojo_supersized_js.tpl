@@ -1,5 +1,5 @@
         <script type="text/javascript" src="{$SITEURL}/js/supersized{if !$slideshow}.core{/if}.min.js"></script>
-        <script type="text/javascript">
+        {if $ssinitialise}<script type="text/javascript">
      jQuery(function($){ldelim}
                 $.supersized({ldelim}
                     slides  :   [
@@ -9,3 +9,4 @@
                 {rdelim});
             {rdelim});
         </script>
+        {/if}

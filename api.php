@@ -34,3 +34,14 @@ $_options[] = array(
     'options'     => '',
     'plugin'      => 'jojo_supersized'
 );
+
+$_options[] = array(
+    'id'          => 'supersized_code',
+    'category'    => 'Supersized',
+    'label'       => 'Initialise',
+    'description' => 'Set to no if you want to use your own initialise scripts',
+    'type'        => 'radio',
+    'default'     => 'yes',
+    'options'     => 'yes,no',
+    'plugin'      => 'jojo_supersized'
+);
