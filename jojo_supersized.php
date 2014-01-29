@@ -27,7 +27,9 @@ class Jojo_Plugin_Jojo_supersized extends Jojo_Plugin
         $ssimages = Jojo::selectQuery("SELECT * FROM {ssimage} ORDER BY displayorder, name");
         if ($ssimages) {
             if (count($ssimages)>1) {
-                $ssimages = $random ? shuffle($ssimages) : $ssimages;
+                if ($random) { 
+                    shuffle($ssimages);
+                }
                 $ssimages = $slideshow ?  $ssimages : array_slice($ssimages, 0, 1);
             }
             foreach ($ssimages as &$a){
