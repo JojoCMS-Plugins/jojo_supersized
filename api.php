@@ -25,6 +25,50 @@ $_options[] = array(
 );
 
 $_options[] = array(
+    'id'          => 'supersized_slidecontrols',
+    'category'    => 'Supersized',
+    'label'       => 'Prev/Next',
+    'description' => 'Display control buttons for Prev/Next slide',
+    'type'        => 'radio',
+    'default'     => 'no',
+    'options'     => 'yes,no',
+    'plugin'      => 'jojo_supersized'
+);
+
+$_options[] = array(
+    'id'          => 'supersized_slideprogress',
+    'category'    => 'Supersized',
+    'label'       => 'Progress',
+    'description' => 'Display a progress slider',
+    'type'        => 'radio',
+    'default'     => 'no',
+    'options'     => 'yes,no',
+    'plugin'      => 'jojo_supersized'
+);
+
+$_options[] = array(
+    'id'          => 'supersized_slidenav',
+    'category'    => 'Supersized',
+    'label'       => 'Slide Nav',
+    'description' => 'Display nav icons for slides',
+    'type'        => 'radio',
+    'default'     => 'no',
+    'options'     => 'yes,no',
+    'plugin'      => 'jojo_supersized'
+);
+
+$_options[] = array(
+    'id'          => 'supersized_slidecaptions',
+    'category'    => 'Supersized',
+    'label'       => 'Captions',
+    'description' => 'Display ccaptions for slides',
+    'type'        => 'radio',
+    'default'     => 'no',
+    'options'     => 'yes,no',
+    'plugin'      => 'jojo_supersized'
+);
+
+$_options[] = array(
     'id'          => 'supersized_size',
     'category'    => 'Supersized',
     'label'       => 'Image size',

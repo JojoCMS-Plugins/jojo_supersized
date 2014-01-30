@@ -37,6 +37,11 @@ class Jojo_Plugin_Jojo_supersized extends Jojo_Plugin
                 $a['caption'] = htmlspecialchars($a['caption'], ENT_COMPAT, 'UTF-8', false);
                 $a['image'] = urlencode($a['image']);
             }
+            $smarty->assign('slideshow', $slideshow);
+            $smarty->assign('sscaptions', (boolean)(Jojo::getOption('supersized_slidecaptions', 'no')=='yes'));
+            $smarty->assign('ssprogress', (boolean)(Jojo::getOption('supersized_slideprogress', 'no')=='yes'));
+            $smarty->assign('sscontrols', (boolean)(Jojo::getOption('supersized_slidecontrols', 'no')=='yes'));
+            $smarty->assign('ssnav', (boolean)(Jojo::getOption('supersized_slidenav', 'no')=='yes'));
             $smarty->assign('ssimages', $ssimages);
             $smarty->assign('ssinitialise', $initialise);
             $smarty->assign('sscrop', Jojo::getOption('supersized_size', '1200x800'));
