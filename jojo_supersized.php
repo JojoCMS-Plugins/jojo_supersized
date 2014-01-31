@@ -20,7 +20,9 @@ class Jojo_Plugin_Jojo_supersized extends Jojo_Plugin
 {
 
      public static function foot() {
-        global $smarty;
+        global $smarty, $isadmin;
+        /* don't supersize in admin */
+        if (isset($isadmin) && $isadmin) return false;
         $slideshow = (boolean)(Jojo::getOption('supersized_slideshow', 'no')=='yes');
         $random = (boolean)(Jojo::getOption('supersized_random', 'yes')=='yes');
         $initialise = (boolean)(Jojo::getOption('supersized_code', 'yes')=='yes');
@@ -48,6 +50,7 @@ class Jojo_Plugin_Jojo_supersized extends Jojo_Plugin
             $code = $smarty->fetch('jojo_supersized_js.tpl');
             return $code;
         }
+        return false;
     }
 
 
